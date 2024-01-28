@@ -9,7 +9,7 @@ router.use(express.json())
 
 router.get("/", async (req,res)=> {
     try {
-        const albums = await Album.find();
+        const albums = await Album.find()
         res.send(albums)
     }catch (error){
         res.status(500).send(error.message)
